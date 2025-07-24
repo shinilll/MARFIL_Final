@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Account - DepartSure</title>
+  <link rel="stylesheet" href="css/signup.css" />
+  <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Aboreto&family=Afacad:wght@400;700&family=League+Spartan:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="signup-bg">
+    <div class="signup-flex">
+      <div class="signup-side">
+        <div class="signup-header">
+          <img src="img/logo.png" alt="Logo" class="signup-logo" />
+          <div class="signup-brand">
+            <div class="signup-title">DepartSure</div>
+            <div class="signup-subtitle">RIDE SMART. ARRIVE SMARTER.</div>
+          </div>
+        </div>
+      </div>
+      <div class="signup-card">
+        <h2 class="signup-heading">Create Account</h2>
+        <form class="signup-form">
+          <div class="input-group">
+            <span class="input-icon">
+              <svg width="20" height="20" fill="none" stroke="#19835F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 8-4 8-4s8 0 8 4"/></svg>
+            </span>
+            <input type="text" placeholder="Full Name" class="signup-input" />
+          </div>
+          <div class="input-group">
+            <span class="input-icon">
+              <!-- Mail icon SVG -->
+              <svg width="20" height="20" fill="none" stroke="#19835F" stroke-width="2" viewBox="0 0 24 24">
+                <rect x="3" y="5" width="18" height="14" rx="2"/>
+                <path d="M3 7l9 6 9-6"/>
+              </svg>
+            </span>
+            <input type="email" placeholder="Email" class="signup-input" />
+          </div>
+          <div class="input-group">
+            <span class="input-icon">
+              <svg width="20" height="20" fill="none" stroke="#19835F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="8" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </span>
+            <input type="password" placeholder="Password" class="signup-input" id="signup-password" />
+            <span class="input-icon input-eye" onclick="toggleSignupPassword()">
+              <svg id="eye-open" width="20" height="20" fill="none" stroke="#19835F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg>
+            </span>
+          </div>
+          <div class="input-group">
+            <span class="input-icon">
+              <svg width="20" height="20" fill="none" stroke="#19835F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="8" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </span>
+            <input type="password" placeholder="Confirm Password" class="signup-input" id="signup-confirm-password" />
+            <span class="input-icon input-eye" onclick="toggleSignupConfirmPassword()">
+              <svg id="eye-open" width="20" height="20" fill="none" stroke="#19835F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg>
+            </span>
+          </div>
+          <button type="button" class="signup-btn" onclick="window.location.href='login.html'">Sign Up</button>
+        </form>
+        <div class="signup-login">
+          Already have an account? <a href="login.html">Log In</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function toggleSignupPassword() {
+      var pwd = document.getElementById('signup-password');
+      pwd.type = pwd.type === 'password' ? 'text' : 'password';
+    }
+    function toggleSignupConfirmPassword() {
+      var pwd = document.getElementById('signup-confirm-password');
+      pwd.type = pwd.type === 'password' ? 'text' : 'password';
+    }
+  </script>
+</body>
+</html>
+
