@@ -1,0 +1,327 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow: hidden;
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+body, html {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Afacad', 'ADLaM Display', 'Aboreto', 'League Spartan', sans-serif;
+  background: linear-gradient(180deg, rgba(0, 169, 70, 0.9) 0%, rgba(19, 112, 54, 0.85) 30%, rgba(0, 204, 85, 0.7) 100%);
+}
+
+.login-bg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  min-width: 100vw;
+  background: linear-gradient(180deg, rgba(0, 169, 70, 0.9) 0%, rgba(19, 112, 54, 0.85) 30%, rgba(0, 204, 85, 0.7) 100%);
+  padding: 0 0;
+}
+
+.login-card {
+  background: #fff;
+  border-radius: 40px 40px 50px 50px;
+  padding: 32px 24px 24px 24px;
+  max-width: 450px;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  min-height: 700px;
+}
+
+.login-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: -10em;
+}
+
+.login-logo {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  display: block;
+}
+
+.login-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.login-title {
+  font-family: 'ADLaM Display', cursive;
+  font-size: 24px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 31px;
+  margin-bottom: 2px;
+}
+
+.login-subtitle {
+  font-family: 'Dhyana', 'Aboreto', cursive;
+  font-size: 10px;
+  color: #fff;
+  font-weight: 400;
+  line-height: 16px;
+  margin-top: 2px;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.10);
+}
+
+.login-heading {
+  font-family: 'Afacad', sans-serif;
+  font-size: 20px;
+  color: #363130;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  text-align: left;
+  width: 100%;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1.5px solid #19835F;
+  border-radius: 12px;
+  padding: 12px 12px 12px 12px;
+  height: 48px;
+  margin-bottom: 0;
+}
+
+.input-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  color: #19835F;
+  min-width: 24px;
+}
+
+.input-eye {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.login-input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  font-family: 'Afacad', sans-serif;
+  color: #363130;
+  flex: 1 1 0;
+  height: 44px;
+  padding: 0 4px;
+}
+
+.login-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #454545;
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.forgot-link {
+  color: #363130;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px 0;
+  background: linear-gradient(90deg, #43B666 0%, #19835F 100%);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 24px;
+  font-family: 'Afacad', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 8px;
+  box-shadow: 0 2px 8px 0 rgba(67,182,102,0.10);
+  transition: background 0.2s;
+}
+.login-btn:hover {
+  background: linear-gradient(90deg, #00A946 50%,#19835F 1000%, #43B666 100%);
+}
+
+.login-or {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: #363130;
+  font-size: 15px;
+  margin: 18px 0 0 0;
+  gap: 8px;
+}
+.divider {
+  flex: 1;
+  height: 1.5px;
+  background: #bdbdbd;
+  border-radius: 1px;
+}
+
+.login-socials {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  width: 100%;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.login-social {
+  flex: 1 1 0;
+  padding: 8px 0;
+  border: 1.5px solid #19835F;
+  border-radius: 30px;
+  font-size: 15px;
+  color: #363130;
+  background: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: 'Afacad', sans-serif;
+  font-weight: 700;
+  transition: background 0.2s, color 0.2s;
+}
+.login-social.facebook {
+  border-color: #19835F;
+  color: #36313088;
+}
+.login-social.google {
+  border-color: #19835F;
+  color: #EA4335;
+}
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-signup {
+  text-align: center;
+  color: #363130;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 13px;
+  margin-top: 18px;
+}
+
+.login-signup a {
+  color: #19835F;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.login-social span, .login-social.google, .login-social.facebook {
+  font-family: 'Afacad', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #363130b0;
+}
+
+.login-social {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  padding-left: 5px;
+}
+
+.login-social .social-icon img {
+  width: 25px !important;
+  height: 25px !important;
+}
+
+/* Layout copied from signup.css for perfect parity */
+.login-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1100px;
+  gap: 40px;
+  padding-top: 100px; /* Desktop: Add padding above the card+logo */
+}
+
+@media (max-width: 800px) {
+  .login-flex {
+    padding-top: 0;
+    flex-direction: column;
+    gap: 0;
+  }
+  .login-side {
+    margin-bottom: 20px;
+  }
+}
+
+.login-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 300px;
+  max-width: 400px;
+}
+
+@media (min-width: 801px) {
+  .login-flex {
+    align-items: flex-start;
+  }
+  .login-side {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .login-logo {
+    width: 200px !important;
+    height: 200px !important;
+  }
+  .login-title {
+    font-size: 38px !important;
+    line-height: 48px !important;
+  }
+  .login-subtitle {
+    font-size: 18px !important;
+    line-height: 28px !important;
+  }
+}
