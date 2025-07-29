@@ -9,46 +9,116 @@
 </head>
 <body>
   <header class="navbar">
-    <div class="logo">DepartSure</div>
+    <div class="logo">
+      <img src="img/logo.png" alt="Logo" class="logo-img" />
+      DepartSure
+    </div>
     <nav class="nav-links">
       <a href="#" class="active">Home</a>
-      <a href="#">Map</a>
+      <a href="map.html">Map</a>
       <a href="#">Tracker</a>
     </nav>
-    <div class="profile-avatar">
-      <img src="img/profile.jpg" alt="Profile" />
+    <div class="profile-avatar" onclick="toggleProfile()">
+      <img src="img/profile.png" alt="Profile" />
     </div>
   </header>
-  <main class="homepage-main">
-    <div class="homepage-card-row">
-      <section class="homepage-card">
-        <div class="info-row">
-          <div class="info-item">
-            <span class="icon calendar"></span>
-            <span>Class Schedule</span>
+  <div class="homepage-bg">
+    <main class="homepage-main">
+      <div class="homepage-greeting">
+        <h1>Hello, Sheinele!</h1>
+      </div>
+      <div class="homepage-card-row">
+        <section class="homepage-card">
+          <div class="info-row">
+            <div class="info-item">
+              <img src="img/sched.png" alt="Class Schedule" class="info-icon" />
+              <span>Class Schedule</span>
+            </div>
+            <div class="info-item">
+              <img src="img/homead.png" alt="Home Address" class="info-icon" />
+              <span>Home Address</span>
+            </div>
+            <div class="info-item">
+              <img src="img/loc.png" alt="Destination Address" class="info-icon" />
+              <span>Destination Address</span>
+            </div>
           </div>
-          <div class="info-item">
-            <span class="icon home"></span>
-            <span>Home Address</span>
+          <button class="suggest-btn">Suggest Departure Time</button>
+        </section>
+        <div class="homepage-actions">
+          <div class="action-card">
+            <img src="img/saved.png" alt="Saved Routes" class="info-icon" />
+            <span>Saved Routes</span>
           </div>
-          <div class="info-item">
-            <span class="icon location"></span>
-            <span>Destination Address</span>
+          <div class="action-card">
+            <img src="img/recent.png" alt="Recent Activity" class="info-icon" />
+            <span>Recent Activity</span>
           </div>
         </div>
-        <button class="suggest-btn">Suggest Departure Time</button>
-      </section>
-      <div class="homepage-actions">
-        <div class="action-card">
-          <span class="icon bookmark"></span>
-          <span>Saved Routes</span>
-        </div>
-        <div class="action-card">
-          <span class="icon recent"></span>
-          <span>Recent Activity</span>
+        
+        <!-- Add your content here - below Saved Routes and Recent Activity -->
+        <div class="content-below-actions">
+          <!-- Your new content goes here -->
         </div>
       </div>
+    </main>
+  </div>
+
+  <!-- Profile Overlay -->
+  <div class="profile-overlay" id="profileOverlay">
+    <div class="profile-card">
+      <div class="profile-header">
+        <div class="back-button" onclick="toggleProfile()">←</div>
+        <div class="profile-title">Profile</div>
+      </div>
+      
+      <div class="profile-info">
+        <img src="img/wonyoung.jpg" alt="Profile Picture" class="profile-pic" />
+        <div class="profile-name">Silva Moon</div>
+      </div>
+      
+      <ul class="profile-menu">
+        <li><span class="icon"><img src="img/profile-icon.png" alt=""></span><span class="menu-label">My Profile</span><span class="chevron">›</span></li>
+        <li><span class="icon"><img src="img/location-icon.png" alt=""></span><span class="menu-label">Location</span><span class="chevron">›</span></li>
+        <li><span class="icon"><img src="img/language.png" alt=""></span><span class="menu-label">Languages</span><span class="chevron">›</span></li>
+        <li><span class="icon"><img src="img/notif-icon.png" alt=""></span><span class="menu-label">Notification</span><span class="chevron">›</span></li>
+        <li><span class="icon"><img src="img/datasaver.png" alt=""></span><span class="menu-label">Data Saver</span><span class="chevron">›</span></li>
+        <li><span class="icon"><img src="img/about.png" alt=""></span><span class="menu-label">About</span><span class="chevron">›</span></li>
+        <li onclick="showLogoutConfirmation()"><span class="icon"><img src="img/logout.png" alt=""></span><span class="menu-label">Logout</span><span class="chevron">›</span></li>
+      </ul>
     </div>
-  </main>
+  </div>
+  <!-- Logout Confirmation Dialog -->
+  <div class="logout-dialog" id="logoutDialog">
+    <div class="logout-dialog-content">
+      <div class="logout-message">Are you sure you want to log out?</div>
+      <div class="logout-buttons">
+        <button class="logout-btn-yes" onclick="confirmLogout()">Yes</button>
+        <button class="logout-btn-no" onclick="hideLogoutConfirmation()">No</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleProfile() {
+      const overlay = document.getElementById('profileOverlay');
+      overlay.classList.toggle('active');
+    }
+
+    function showLogoutConfirmation() {
+      const dialog = document.getElementById('logoutDialog');
+      dialog.classList.add('active');
+    }
+
+    function hideLogoutConfirmation() {
+      const dialog = document.getElementById('logoutDialog');
+      dialog.classList.remove('active');
+    }
+
+    function confirmLogout() {
+      // Redirect to splash screen
+      window.location.href = 'splash.html';
+    }
+  </script>
 </body>
 </html>

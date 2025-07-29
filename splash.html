@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DepartSure - Splash</title>
+    <link rel="stylesheet" href="css/splash.css">
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Aboreto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="splash-container" id="splashContainer">
+        <!-- Background circle that grows to fill screen -->
+        <div class="background-circle"></div>
+        
+        <!-- Logo group -->
+        <div class="logo-group">
+            <img src="img/logo.png" alt="DepartSure Logo" class="logo-image">
+        </div>
+        
+        <!-- Text elements -->
+        <div class="text-container">
+            <h1 class="app-title">DepartSure</h1>
+            <p class="tagline">RIDE SMART. ARRIVE SMARTER.</p>
+        </div>
+    </div>
+
+    <script>
+        const splashContainer = document.getElementById('splashContainer');
+        
+        // Animation sequence based on Figma interactions
+        function startAnimation() {
+            // Splash1 → Splash2: After 600ms delay, 800ms duration, Bouncy curve
+            setTimeout(() => {
+                splashContainer.classList.add('splash-2');
+            }, 600);
+            
+            // Splash2 → Splash3: After 400ms delay, 800ms duration, Bouncy curve
+            setTimeout(() => {
+                splashContainer.classList.remove('splash-2');
+                splashContainer.classList.add('splash-3');
+            }, 1800); // 600 + 800 + 400
+            
+            // Splash3 → Splash4: After 400ms delay, 300ms duration, Ease out curve
+            setTimeout(() => {
+                splashContainer.classList.remove('splash-3');
+                splashContainer.classList.add('splash-4');
+                document.body.classList.add('splash-4-active');
+            }, 3000); // 1800 + 800 + 400
+            
+            // Splash4 → Login: After 1200ms delay, 1000ms duration, Gentle curve
+            setTimeout(() => {
+                window.location.href = 'login.html';
+            }, 5200); // 3000 + 300 + 1200 + 1000
+        }
+        
+        // Start animation when page loads
+        window.addEventListener('load', startAnimation);
+    </script>
+</body>
+</html> 
