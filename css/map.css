@@ -125,6 +125,29 @@ body {
     font-family: Arial, sans-serif;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+.embed-map-responsive{
+    position:relative;
+    text-align:right;
+    width:100%;
+    height:0;
+    padding-bottom:81.69934640522875%;
+}
+.embed-map-container{
+    overflow:hidden;
+    background:none;
+    width:100%;
+    height:100%;
+    position:absolute; 
+    top:0;
+    left:0;
+}
+.embed-map-frame{
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0
+}
 
 /* Search Bar */
 .search-container {
@@ -236,9 +259,10 @@ body {
   .profile-overlay .profile-title {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 25px;
     color: white;
     flex: 1;
+    margin-right: 60px;
     text-align: center;
   }
   
